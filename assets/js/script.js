@@ -169,19 +169,39 @@ window.addEventListener("mousemove", function (event) {
 
 });
 
-// function to show image when we click on a image
+// Function to show image when we click on an image
 function showImage(imageSrc) {
-  let popupImage = document.getElementById("popupImage");
-  popupImage.src = imageSrc;
+  header.classList.add("hide");
+  header.style.zIndex = "0";
 
-  let imagePopup = document.getElementById("imagePopup");
-  imagePopup.style.display = "block";
-  document.body.style.overflow = "hidden";
+  
+  setTimeout(() => {
+    let popupImage = document.getElementById("popupImage");
+    popupImage.src = imageSrc;
+
+    let imagePopup = document.getElementById("imagePopup");
+    imagePopup.style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+    let footer = document.getElementById("footer");
+    footer.style.zIndex = "0";
+
+    
+  }, 300); // Adjust the delay time (in milliseconds) as needed
 }
-// function to hide the image when we click on cross button
+
+// Function to hide the image when we click on the close button
 function closeImage() {
   let imagePopup = document.getElementById("imagePopup");
   imagePopup.style.display = "none";
   document.body.style.overflow = "auto";
+
+  // Set z-index of the header to be behind the image
+  header.classList.remove("hide");
+  header.style.zIndex = "";
+
+  let footer = document.getElementById("footer");
+  footer.style.zIndex = "";
 }
+
 

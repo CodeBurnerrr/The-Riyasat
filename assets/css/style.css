@@ -2535,7 +2535,8 @@ textarea.input-field {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(41, 38, 38, 0.95);
+  
 }
 
 /* close button when we want to close the bigger image */
