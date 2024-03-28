@@ -2542,7 +2542,7 @@ textarea.input-field {
 /* close button when we want to close the bigger image */
 .close-button {
   position: absolute;
-  top: 180px;
+  top: 70px;
   right: 50px;
   font-size: 60px;
   color: #fff;
