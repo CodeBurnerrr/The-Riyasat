@@ -16,7 +16,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="The Riyasat.png">
+  <link rel="shortcut icon" href="./assets/images/The Riyasat.png">
 
   <!-- 
     - google font link
@@ -108,7 +108,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="The Riyasat.png" width="200" height="50" alt="The Riyasat - Home">
+        <img src="./assets/images/The Riyasat.png" width="200" height="50" alt="The Riyasat - Home">
       </a>
 
       <nav class="navbar" data-navbar>
@@ -118,7 +118,7 @@
         </button>
 
         <a href="#" class="logo">
-          <img src="The Riyasat.png" width="200" height="50" alt="The Riyasat - Home">
+          <img src="./assets/images/The Riyasat.png" width="200" height="50" alt="The Riyasat - Home">
         </a>
 
         <ul class="navbar-list">
@@ -176,7 +176,7 @@
 
           <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
 
-          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@riyasat.com</a>
+          <a href="mailto:booking@riyasat.com" class="body-4 sidebar-link">booking@riyasat.com</a>
 
           <div class="separator"></div>
 
@@ -835,11 +835,16 @@
 
               <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
 
-              <button type="submit" class="btn btn-secondary">
+              <button type="submit" class="btn btn-secondary" id="bookBtn">
                 <span class="text text-1">Book A Table</span>
-
                 <span class="text text-2" aria-hidden="true">Book A Table</span>
-              </button>
+            </button>
+            
+            <div class="alert alert-success" id="confirmation">
+                <span id="confirmationText">Booking confirmed</span>
+                <span class="close-btn" id="closeBtn">&times;</span>
+            </div>
+            
 
             </form>
 
@@ -1075,7 +1080,7 @@
         <div class="footer-brand has-before has-after">
 
           <a href="#" class="logo">
-            <img src="The Riyasat.png" width="200" height="50" loading="lazy" alt="grilli home">
+            <img src="./assets/images/The Riyasat.png" width="200" height="50" loading="lazy" alt="riyasat home">
           </a>
 
           <address class="body-4">
@@ -1124,23 +1129,23 @@
         <ul class="footer-list">
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="icons8-facebook-40.png"></a>
+            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="./assets/images/icons8-facebook-40.png"></a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="instagram-logo.png"></a>
+            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="./assets/images/instagram-logo.png"></a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="icons8-twitter-36.png"></a>
+            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="./assets/images/icons8-twitter-36.png"></a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="icons8-youtube-40.png"></a>
+            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src="./assets/images/icons8-youtube-40.png"></a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src ="icons8-google-maps-40.png"></a>
+            <a href="#" class="label-2 footer-link hover-underline hover:shine"><img src ="./assets/images/icons8-google-maps-40.png"></a>
           </li>
 
         </ul>
@@ -1187,6 +1192,19 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    document.getElementById("bookBtn").addEventListener("click", function() {
+        // Show the booking confirmation bar
+        const alertBox = document.getElementById("confirmation");
+        alertBox.style.display = "block";
+    });
+
+    document.getElementById("closeBtn").addEventListener("click", function() {
+        // Hide the booking confirmation bar when close button is clicked
+        document.getElementById("confirmation").style.display = "none";
+    });
+	
+    </script>
 
 </body>
 

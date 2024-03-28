@@ -204,4 +204,10 @@ function closeImage() {
   footer.style.zIndex = "";
 }
 
+document.getElementById('bookBtn').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default action of following the link
+
+  // Show the confirmation message
+  document.getElementById('confirmation').classList.remove('hidden');
+});
 
