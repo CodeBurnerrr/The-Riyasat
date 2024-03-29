@@ -772,9 +772,9 @@
               </p>
 
               <div class="input-wrapper">
-                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
+                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field" id="field1">
 
-                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
+                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field" id="field2">
               </div>
 
               <div class="input-wrapper">
@@ -798,7 +798,7 @@
                 <div class="icon-wrapper">
                   <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
 
-                  <input type="date" name="reservation-date" class="input-field">
+                  <input type="date" name="reservation-date" class="input-field" id = "field3">
 
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
@@ -1188,19 +1188,42 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
-    document.getElementById("bookBtn").addEventListener("click", function () {
-      // Show the booking confirmation bar
-      const alertBox = document.getElementById("confirmation");
-      alertBox.style.display = "block";
-    });
 
-    document.getElementById("closeBtn").addEventListener("click", function () {
-      // Hide the booking confirmation bar when close button is clicked
-      document.getElementById("confirmation").style.display = "none";
+    document.getElementById("bookBtn").addEventListener("click", function() {
+        // Show the booking confirmation bar
+        if (document.getElementById("field1").value === "") {
+            document.getElementById("confirmationText").innerHTML = 'Please write your name';
+            const alertBox = document.getElementById("confirmation");
+            alertBox.style.backgroundColor = "red";
+            alertBox.style.display = "block";
+        } else if (document.getElementById("field2").value === "") {
+            document.getElementById("confirmationText").innerHTML = 'Please write your phone number';
+            const alertBox = document.getElementById("confirmation");
+            alertBox.style.backgroundColor = "red";
+            alertBox.style.display = "block";
+        } else if (document.getElementById("field3").value === "") {
+            document.getElementById("confirmationText").innerHTML = 'Please select date';
+            const alertBox = document.getElementById("confirmation");
+            alertBox.style.backgroundColor = "red";
+            alertBox.style.display = "block";
+        } else {
+            document.getElementById("confirmationText").innerHTML = 'Booking Confirmed';
+            const alertBox = document.getElementById("confirmation");
+            alertBox.style.backgroundColor = "green";
+            alertBox.style.display = "block";
+        }
     });
-
-  </script>
+    
+    document.getElementById("closeBtn").addEventListener("click", function() {
+        // Hide the booking confirmation bar when close button is clicked
+        document.getElementById("confirmation").style.display = "none";
+    });
+    
+      
+        </script>
 
 </body>
 
 </html>
+
+
