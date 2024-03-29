@@ -2586,7 +2586,7 @@ at middle of screen */
 gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
 
 --> */
-
+/* 
 .material-symbols-outlined {
 	font-variation-settings:
 	'FILL' 0,
@@ -2598,7 +2598,7 @@ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
 .container {
 	margin: 0 auto;
 	max-width: 1000px;
-}
+} */
 
 .alert {
 	--foreground-color: #222222;
