@@ -1933,7 +1933,7 @@ textarea.input-field {
     margin-inline: auto;
   }
 
-   
+
 
 
 
@@ -2538,7 +2538,7 @@ textarea.input-field {
   width: 100%;
   height: 100%;
   background-color: rgba(41, 38, 38, 0.95);
-  
+
 }
 
 /* close button when we want to close the bigger image */
@@ -2552,7 +2552,7 @@ textarea.input-field {
 }
 
 .close-button:hover {
-  color: red;
+  color: var(--gold-crayola);
 }
 
 /* when we click on the image it will expand in bigger size and will displayed 
@@ -2583,56 +2583,55 @@ at middle of screen */
 
 
 /* <!--      
-gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-
+alert
 --> */
 
 .material-symbols-outlined {
-	font-variation-settings:
-	'FILL' 0,
-	'wght' 400,
-	'GRAD' 0,
-	'opsz' 48
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
 .container {
-	margin: 0 auto;
-	max-width: 1000px;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .alert {
-	--foreground-color: #222222;
-	--background-color: #eeeeee;
+  --foreground-color: #222222;
+  --background-color: #eeeeee;
 
-	display: flex;
-	align-items: center;
-	padding: 1em;
-	box-sizing: border-box;
-	border-radius: 5px;
-	width: 100%;
-	background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  background-color: var(--background-color);
 }
 
 .alert-icon {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .alert-text {
-	margin-left: 1em;
-	font-size: 1.15em;
-	font-weight: 500;
-	font-family: 'Lexend', sans-serif;
+  margin-left: 1em;
+  font-size: 1.15em;
+  font-weight: 500;
+  font-family: 'Lexend', sans-serif;
 }
 
 .alert-icon .material-symbols-outlined,
 .alert-text {
-	color: var(--foreground-color);
+  color: var(--foreground-color);
 }
 
 .alert-success {
-	--foreground-color: #ffffff;
-	--background-color: #46b63e;
+  --foreground-color: #ffffff;
+  --background-color: #46b63e;
   display: none;
   position: fixed;
   top: 0;
